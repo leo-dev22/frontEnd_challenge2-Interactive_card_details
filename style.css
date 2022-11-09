@@ -1,0 +1,19 @@
+@import url(https://fonts.google.com/specimen/Space+Grotesk);
+:root{
+  --width-mobile:375px;
+  --width-desktop:1440px;
+  --color-primary1:Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --color-primary2:Red (input errors): hsl(0, 100%, 66%);
+  
+  --color-white: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+  --fs:18px;
+  --fw:500;
+  --ff:'Space+Grotesk',sans-serif;
+}
+
+
+
+

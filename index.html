@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Card Details</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main>
+    <div class="left"></div>
+    <div class="right">
+      <div class="name">
+        <label for="name">CARDHOLDER NAME</label>
+        <input type="text" name="name" id="name" minlength="4"
+        maxlength="50" size="60" required>
+      </div>
+      <div class="number">
+        <label for="number">CARD NUMBER</label>
+        <input type="number" name="number" id="number" 
+        placeholder="e.g. 1234 5678 9123 0000 ">
+        <span class="errors"></span>
+      </div>
+      <div class="date">
+        <div class="left">
+          <label for="month">EXP. DATE (MM/YY)</label>
+          <input type="number" id="month" >
+          <input type="number" name="year" id="year">
+          <span class="errors"></span>
+        </div>
+        <div class="right">
+          <label for="cvv">CVV</label>
+          <input type="number" name="cvv" id="cvv" placeholder="e.g. 123" required>
+          <span class="errors"></span>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+
+<script src="./main.js"></script>
+</body>
+</html>
