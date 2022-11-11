@@ -4,7 +4,7 @@
   --width-mobile:375px;
   --width-desktop:1440px;
   --color-primary1:Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
-  --color-primary2:Red (input errors): hsl(0, 100%, 66%);
+  --color-primary2:hsl(0, 100%, 66%);
   
   --color-white: hsl(0, 0%, 100%);
   --Light-grayish-violet: hsl(270, 3%, 87%);
@@ -33,6 +33,7 @@ body{
   height: 100vh;
   display: flex;
   justify-content: center; 
+  font-family: var(--ff);
 }
 main{
   display:grid;
@@ -87,16 +88,72 @@ section.right{
   border: 2px solid black;
   display: flex;
   flex-direction: column;
+  margin-top: 220px;
+  padding-left: 295px;
 
+}
+ label{
+  display: flex;
+  /* flex-direction: row; */
+  margin: 10px 10px 5px 0;
+  font-size: .7rem;
+  font-weight: 650;
+  font-family: var(--ff);
+  letter-spacing: .10em;
+  color: var(--Very-dark-violet);
+}
+input,.btn{
+  width: 335px;
+  height: 38px;
+  border-radius: 7px;
+  border: 1px solid var(--Light-grayish-violet);
+}
+input::placeholder{
+  color: var(--Light-grayish-violet);
+  font-size: 1rem;
+  font-family: var(--ff);
+  padding-left: 13px;
 }
 .name{
-  
+  border: 1px solid blue;
+  margin-bottom: 5px;
+  margin-top: 8px;
 }
 .number{
-
+  border: 1px solid blue;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+.errors{
+  color: var(--color-primary2);
 }
 .date{
-  
+  border: 1px solid blue;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.date .left{
+  display: flex;
+  flex-direction: column;
+}
+.left input[type='number'],input[type='year']{
+width: 68px;
+margin-right: 5px;
+}
+.right{
+  margin-right: 192px;
+}
+.right>input{
+  width: 150px;
+}
+.btn{
+  margin-top: 40px;
+  color: var(--color-white);
+background-color: var(--Very-dark-violet);
+text-transform:capitalize;
+font-weight: 600;
+letter-spacing: .12em;
 }
 
 

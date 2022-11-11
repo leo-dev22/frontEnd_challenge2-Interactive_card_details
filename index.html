@@ -21,7 +21,7 @@
       <div class="name">
         <label for="name">CARDHOLDER NAME</label>
         <input type="text" name="name" id="name" minlength="4"
-        maxlength="50" size="60" required>
+        maxlength="50" size="26" required placeholder="e.g. Leopauld Ndenko">
       </div>
       <div class="number">
         <label for="number">CARD NUMBER</label>
@@ -29,19 +29,25 @@
         placeholder="e.g. 1234 5678 9123 0000 ">
         <span class="errors"></span>
       </div>
+
       <div class="date">
+        
         <div class="left">
           <label for="month">EXP. DATE (MM/YY)</label>
-          <input type="number" id="month" >
-          <input type="number" name="year" id="year">
+          <div>
+          <input type="number" id="month" placeholder="MM">
+
+          <input type="year"   name="year" id="year" placeholder="YY" required>
           <span class="errors"></span>
         </div>
+      </div>
         <div class="right">
           <label for="cvv">CVV</label>
           <input type="number" name="cvv" id="cvv" placeholder="e.g. 123" required>
           <span class="errors"></span>
         </div>
       </div>
+      <button class="btn" id="btn">confirm</button>
      </div>
     </section>
   </main>
