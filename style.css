@@ -22,13 +22,11 @@
 
 }
 html{
-  border: 2px solid blue;
   display: flex;
   justify-content: center; 
 }
 
 body{
-  border: 2px solid red;
    width: var(--width-desktop);
   height: 100vh;
   display: flex;
@@ -65,6 +63,29 @@ section.left{
   height: 212px;
   border-radius: 10px;
 }
+.card1 .card .round-image:first-child {
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ /* background-color: var(--color-white); */
+ border: 2px solid gold;
+}
+.card1 .card .round-image:last-child{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid white;
+  margin: 50px;
+}
+.round-image{
+  display: flex;
+  flex-direction: column;
+}
+.card{
+  /* border: .5px solid gold; */
+  padding: 1.4rem;
+}
 .card2{
   background-image: url(./images/bg-card-back.png);
   background-repeat: no-repeat;
@@ -79,23 +100,21 @@ section.left{
   border-radius: 10px;
 }
 section.right{
-  border: 2px solid green;
   height: 790px;
   width: 831px;
   background-color: var(--color-white);
 }
 .right-plus{
-  border: 2px solid black;
   display: flex;
   flex-direction: column;
-  margin-top: 220px;
+  margin-top: 221px;
   padding-left: 295px;
 
 }
  label{
   display: flex;
   /* flex-direction: row; */
-  margin: 10px 10px 5px 0;
+  margin: 10px 10px 10px 0;
   font-size: .7rem;
   font-weight: 650;
   font-family: var(--ff);
@@ -115,21 +134,25 @@ input::placeholder{
   padding-left: 13px;
 }
 .name{
-  border: 1px solid blue;
   margin-bottom: 5px;
-  margin-top: 8px;
+  margin-top: 9px;
 }
 .number{
-  border: 1px solid blue;
   margin-bottom: 5px;
-  margin-top: 10px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
 }
 .errors{
+  display: none;
   color: var(--color-primary2);
+  font-size: .6rem;
+  font-weight: 700;
+  margin-top: 5px;
+  letter-spacing: .02em;
 }
 .date{
-  border: 1px solid blue;
-  margin-top: 10px;
+  margin-top: 4px;
   display: flex;
   justify-content: space-between;
 }
@@ -137,18 +160,22 @@ input::placeholder{
   display: flex;
   flex-direction: column;
 }
+.left input[type='number'],.right input[type='number']{
+  margin-bottom: 5px;
+}
 .left input[type='number'],input[type='year']{
 width: 68px;
 margin-right: 5px;
 }
 .right{
-  margin-right: 192px;
+  margin-right: 200px;
 }
 .right>input{
-  width: 150px;
+  width: 170px;
 }
 .btn{
-  margin-top: 40px;
+  margin-top: 30px;
+  height: 45px;
   color: var(--color-white);
 background-color: var(--Very-dark-violet);
 text-transform:capitalize;
