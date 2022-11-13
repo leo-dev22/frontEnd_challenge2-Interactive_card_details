@@ -1,29 +1,37 @@
 // Date regex for 2 numbers
 // /^\d{2}$/
 const inputs= document.querySelectorAll('input[type="text"] ,input[type="number"],input[type="year"]');
-// console.log(inputs);
+
+const errorDisplay=(tag,message,valid)=>{
+  const Container= document.querySelector('.'+ tag +'-container');
+
+  const span= document.querySelector('.'+tag+'-container>span');
+  if(!valid){
+    Container.classList.add('error');
+    span.textContent=message;
+  }else{
+    Container.classList.remove('error');
+    span.textContent=message;
+  }
+}
+
 //fonction that controls each input
 const nameChecker=(value)=>{
-  // console.log(value);
-  const nameContainer= document.querySelector('.name-container');
-  // console.log(nameContainer);
-  const errorName= document.querySelector('.name-container>span');
-  // console.log(errorName);
+  
   if (value.length>0 && (!value.match(/^[A-Z ]*$/))) {
-    nameContainer.classList.add('error');
-    errorName.textContent="Your name should contain any special character";
-    
-  // }else if(!value.match(/^[a-zA-Z0-9_.-]*$/)){
-  //   nameContainer.classList.add("error");
-  //   errorName.textContent="Your name should contain any special character";
+    errorDisplay('name',"Your name should be on capital letter only",)
+  
   }else{
-    nameContainer.classList.remove('error');
-    errorName.textContent="";
+    errorDisplay('name',"",true)
   }
 }
 const numberChecker=(value)=>{
-console.log(value);
-}
+  if (value.length>0  &&((value.length<16)|| (!value.match(/^[0-9]{4}\s.*$/)))) {
+    errorDisplay('number',"Wrong format, number only")
+  
+  }else{
+    errorDisplay('number',"",true)
+}}
 const monthChecker=(value)=>{
 console.log(value);
 }
