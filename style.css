@@ -163,6 +163,8 @@ input::placeholder{
   padding-left: 13px;
 }
 .name-container{
+  display: flex;
+  flex-direction: column;
   margin-bottom: 5px;
   margin-top: 9px;
 }
@@ -180,6 +182,21 @@ input::placeholder{
   margin-top: 5px;
   letter-spacing: .02em;
 }
+/* example */
+.error span{
+  /* display: none; */
+  color: var(--color-primary2);
+  font-size: .6rem;
+  font-weight: 700;
+  margin-top: 5px;
+  letter-spacing: .02em;
+  opacity: 1;
+}
+.error input{
+  color: var(--color-primary2);
+  border: 1px solid rgba(255, 0, 0, 0.575);
+}
+/* xxxxxxxxxx */
 .date{
   margin-top: 4px;
   display: flex;
