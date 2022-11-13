@@ -33,7 +33,7 @@ body{
   justify-content: center; 
   font-family: var(--ff);
 }
-main{
+form{
   display:grid;
   grid-template-columns: 426px 831px;
   position: relative;
@@ -162,11 +162,11 @@ input::placeholder{
   font-family: var(--ff);
   padding-left: 13px;
 }
-.name{
+.name-container{
   margin-bottom: 5px;
   margin-top: 9px;
 }
-.number{
+.number-container{
   margin-bottom: 5px;
   margin-top: 8px;
   display: flex;

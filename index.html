@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <main>
+  <form action="">
+  
     <div class="card1">
       <div class="card">
         <div class="round-image">
@@ -36,15 +37,16 @@
     </section>
     <section class="right">
      <div class="right-plus">
-      <div class="name">
+      <div class="name-container">
         <label for="name">CARDHOLDER NAME</label>
         <input type="text" name="name" id="name" minlength="4"
-        maxlength="50" size="26" required placeholder="e.g. Leopauld Ndenko">
+        maxlength="50" size="26" required placeholder="e.g. Leopauld Ndenko" autocomplete="off">
       </div>
-      <div class="number">
+      <div class="number-container">
         <label for="number">CARD NUMBER</label>
         <input type="number" name="number" id="number" 
-        placeholder="e.g. 1234 5678 9123 0000 ">
+        placeholder="e.g. 1234 5678 9123 0000 " autocomplete="off"
+        min="0">
         <span class="errors">Wrong format, numbers only </span>
       </div>
 
@@ -65,12 +67,12 @@
           <span class="errors" aria-expanded="false">Can't be blank</span>
         </div>
       </div>
-      <button class="btn" id="btn">confirm</button>
+      <input type="submit" value="confirm"class="btn" id="btn">
+      <!-- <button ></button> -->
      </div>
     </section>
-  </main>
   
-
+</form>
 <script src="./main.js"></script>
 </body>
 </html>
