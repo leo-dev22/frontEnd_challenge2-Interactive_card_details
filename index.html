@@ -18,10 +18,11 @@
           <span class="round2"></span>
         </div>
         <div class="card-number">
-          <span>0000 0000 0000 0000</span>
+          <span id="cardNumber">0000 0000 0000 0000</span>
         </div>
         <div class="card-user">
-          <div class="card-username">
+          <div class="card-username"
+          id="card-username">
             LEOPAULD NDENKO
           </div>
           <div class="card-exp_date">00/00</div>
@@ -37,10 +38,9 @@
     </section>
     <section class="right">
      <div class="right-plus">
-      <div class="name-container">
+      <div class="pseudo-container">
         <label for="name">CARDHOLDER NAME</label>
-        <input type="text" name="name" id="name" minlength="4"
-        maxlength="50" size="26" required placeholder="e.g. Leopauld Ndenko" autocomplete="off">
+        <input type="text" name="pseudo" id="pseudo"  size="26" required placeholder="e.g. Leopauld Ndenko" autocomplete="off">
         <span></span>
       </div>
       <div class="number-container">
@@ -54,18 +54,24 @@
       <div class="date">
         
         <div class="left-container">
+          
+          <div class="month-container">
           <label for="month">EXP. DATE (MM/YY)</label>
-          <div>
           <input type="text" id="month" class="month" placeholder="MM">
+          <span></span>
+        </div>
 
+        <div class="year-container">
+          <label for="year"></label>
           <input type="text"   name="year" id="year" class="year" placeholder="YY" required>
-          <span class="errors">Can't be blank</span>
+          <span ></span>
         </div>
       </div>
-        <div class="right-container">
+        
+      <div class="right-container">
           <label for="cvv">CVV</label>
           <input type="text" class="cvv" name="cvv" id="cvv" placeholder="e.g. 123" required>
-          <span class="errors" aria-expanded="false">Can't be blank</span>
+          <span></span>
         </div>
       </div>
       <input type="submit" value="confirm"class="btn" id="btn">
