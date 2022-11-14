@@ -202,24 +202,24 @@ input::placeholder{
   display: flex;
   justify-content: space-between;
 }
-.date .left{
+.date .left-container{
   display: flex;
   flex-direction: column;
 }
-.left input[type='number']{
+.left-container .month,.left-container .year{
   padding: 0 0 0 10px;
 }
-.left input[type='number'],.right input[type='number']{
+.left-container .month,.right-container .cvv{
   margin-bottom: 5px;
 }
-.left input[type='number'],input[type='year']{
+.left-container .month,.left-container .year{
 width: 68px;
 margin-right: 5px;
 }
-.right{
+.right-container{
   margin-right: 200px;
 }
-.right>input{
+.right-container>input{
   width: 170px;
 }
 .btn{

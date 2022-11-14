@@ -25,6 +25,7 @@ const nameChecker=(value)=>{
     errorDisplay('name',"",true)
   }
 }
+
 const numberChecker=(value)=>{
   if (value.length>0  &&((value.length<19)|| (!value.match(/^\d{4} \d{4} \d{4} \d{4}$/)))) {
     errorDisplay('number',"Wrong format, number only")
@@ -32,9 +33,15 @@ const numberChecker=(value)=>{
   }else{
     errorDisplay('number',"",true)
 }}
+
 const monthChecker=(value)=>{
-console.log(value);
-}
+  if (value.length>0  &&((value.length<2)|| (!value.match(/^\d{2}$/)))) {
+    errorDisplay('month',"Can't be blank")
+ 
+  }else{
+    errorDisplay('month',"",true);
+}}
+
 const yearChecker=(value)=>{
 console.log(value);
 }
