@@ -26,9 +26,9 @@ const nameChecker=(value)=>{
   }
 }
 const numberChecker=(value)=>{
-  if (value.length>0  &&((value.length<16)|| (!value.match(/^[0-9]{4}\s.*$/)))) {
+  if (value.length>0  &&((value.length<19)|| (!value.match(/^\d{4} \d{4} \d{4} \d{4}$/)))) {
     errorDisplay('number',"Wrong format, number only")
-  
+ 
   }else{
     errorDisplay('number',"",true)
 }}
