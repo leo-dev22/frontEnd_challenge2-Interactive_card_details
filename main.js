@@ -1,12 +1,19 @@
 
-const inputs= document.querySelectorAll('input[type="text"]');
+const inputs= document.querySelectorAll('input[type="text"],input[type="button"]');
 
-let pseudo,number,month,year,cvv;
+
+// let pseudo,number,month,year,cvv;
+
 const form= document.querySelector('form');
+const btn= document.querySelector('#btn');
 
-const cardNumber= document.querySelector('.card-number');
-const cardUsername= document.querySelector('.card_username');
+const pseudo= document.querySelector('#pseudo');
+
+
+const cardNumber= document.querySelector('.card-number');  
+const cardUsername= document.querySelector('.card-username');
 const cardExpDate= document.querySelector('.card-exp_date');
+
 
 
 
@@ -32,7 +39,7 @@ const pseudoChecker=(value)=>{
   
   }else{
     errorDisplay('pseudo',"",true);
-    pseudo=value
+     pseudo=value
   }
 }
 
@@ -77,8 +84,6 @@ const cvvChecker=(value)=>{
 // use a 'forEach' to give an evenListener individually
 inputs.forEach((input)=>{
  input.addEventListener('input',(e)=>{
-  // console.log(e.target.id);
-  
   switch (e.target.id) {
     case "pseudo":
       pseudoChecker(e.target.value)  
@@ -96,39 +101,35 @@ inputs.forEach((input)=>{
       cvvChecker(e.target.value)  
       break;
   
-    default:nul;
+    default:null;
       break;
   }
-
-  // const input_map={
-  //   number:"cardNumber"
-  // }
-
-  // const inputValue=this.value;
-  // const target=input_map[this.id];
-  // document.getElementById(target).innerHTML=inputValue;
   
  })
 })
-form.addEventListener('submit',(e)=>{
-e.preventDefault();
-if(pseudo && number && month && year && cvv){
+
+btn.addEventListener('click',(e)=>{
+ e.preventDefault();
+
+  // cardUsername.innerHTML=pseudo.value;
+  
   const data={
-    card_username:pseudo,
-    cardNumber:number,
-    month:month,
-    year:year,
-    cvv:cvv
+    pseudo,
+    number,
+    month,
+    year,
+    cvv
 
   }
   inputs.forEach(elemn=>{
-   elemn.addEventListener('input',()=>{
-  const inputValue=this.value;
-  const target=data[this.id];
+   elemn.addEventListener('input',(e)=>{
+  const inputValue=e.target.value;
+  const target=data[data.id];
   document.getElementById(target).innerHTML=inputValue;
    })
   })
-  // console.log(data);
+  console.log(data);
  
-}
+
 })
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
