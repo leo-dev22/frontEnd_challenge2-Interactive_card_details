@@ -18,19 +18,21 @@
           <span class="round2"></span>
         </div>
         <div class="card-number">
-          <span id="cardNumber">0000 0000 0000 0000</span>
+          <span id="cardNumber" class="output_text2">0000 0000 0000 0000</span>
         </div>
         <div class="card-user">
-          <div class="card-username"
+          <div class="card-username output_text1"
           id="card_username">
             LEOPAULD NDENKO
           </div>
-          <div class="card-exp_date">00/00</div>
+          <div class="card-exp_date output_text3">00</div>
+          <div class="card-exp_date ">/</div>
+          <div class="card-exp_date output_text4">00</div>
         </div>
       </div>
     </div>
     <div class="card2">
-      <span class="cvv">000</span>
+      <span class="cvv output_text5" >000</span>
     </div>
     
     <section class="left">
@@ -38,16 +40,17 @@
     </section>
     <section class="right">
      <div class="right-plus">
+      <form action="">
       <div class="pseudo-container">
         <label for="pseudo">CARDHOLDER NAME</label>
-        <input type="text" name="pseudo" id="pseudo " size="26" required placeholder="e.g. Leopauld Ndenko" autocomplete="off">
+        <input type="text" name="pseudo" class="input_text1" id="pseudo " size="26" required placeholder="e.g. Leopauld Ndenko" autocomplete="off">
         <span></span>
       </div>
       <div class="number-container">
         <label for="number">CARD NUMBER</label>
-        <input type="text" name="number" id="number" 
+        <input type="text"  name="number" class="input_text2" id="number" 
         placeholder="e.g. 1234 5678 9123 0000 " autocomplete="off"
-        min="0">
+         maxlength="19">
         <span></span>
       </div>
 
@@ -57,27 +60,28 @@
           
           <div class="month-container">
           <label for="month">EXP. DATE (MM/YY)</label>
-          <input type="text" id="month" class="month" placeholder="MM">
+          <input type="number" id="month" class="month input_text3" placeholder="MM" maxlength="2"
+           >
           <span></span>
         </div>
 
         <div class="year-container">
           <label for="year"></label>
-          <input type="text"   name="year" id="year" class="year" placeholder="YY" required>
+          <input type="number"   name="year " id="year" class="year input_text4" placeholder="YY" required maxlength="2">
           <span ></span>
         </div>
       </div>
         
       <div class="right-container">
           <label for="cvv">CVV</label>
-          <input type="text" class="cvv" name="cvv" id="cvv" placeholder="e.g. 123" required>
+          <input type="number" class="cvv input_text5" name="cvv" id="cvv" placeholder="e.g. 123" maxlength="3" required>
           <span></span>
         </div>
       </div>
-      <input type="button" class="btn" id="btn" value="confirm">
-      <!-- <button ></button> -->
+      <input type="button" class="btn btm" id="btn" value="confirm">
      </div>
-    </section>
+    </form>
+    </section> 
   
 </form>
 <script src="./main.js"></script>

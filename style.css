@@ -38,6 +38,12 @@ form{
   grid-template-columns: 426px 831px;
   position: relative;
 }
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
 
 section.left{
   width: 426px;
@@ -50,13 +56,13 @@ section.left{
 
 }
 .card1{
-  /* position: absolute; */
+  position: absolute;
   background-image: url(./images/bg-card-front.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  /* top: 163px;
-  left: 145px; */
+  top: 163px;
+  left: 145px;
   z-index:99;
   width: 390px;
   height: 212px;
@@ -91,9 +97,9 @@ section.left{
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  /* position: absolute;
+  position: absolute;
   top: 405px;
-  left: 225px; */
+  left: 225px;
   z-index:99;
   width: 390px;
   height: 212px;
@@ -193,7 +199,7 @@ input::placeholder{
   opacity: 1;
 }
 .error input{
-  color: var(--color-primary2);
+  /* color: var(--color-primary2); */
   border: 1px solid rgba(255, 0, 0, 0.575);
 }
 /* xxxxxxxxxx */

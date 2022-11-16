@@ -1,20 +1,20 @@
+const inputText1=document.querySelector('.input_text1');
+const inputText2=document.querySelector('.input_text2');
+const inputText3=document.querySelector('.input_text3');
+const inputText4=document.querySelector('.input_text4');
+const inputText5=document.querySelector('.input_text5');
+const outputText1=document.querySelector('.output_text1');
+const outputText2=document.querySelector('.output_text2');
+const outputText3=document.querySelector('.output_text3');
+const outputText4=document.querySelector('.output_text4');
+const outputText5=document.querySelector('.output_text5');
+const inputs= document.querySelectorAll('input[type="text"],input[type="number"]');
 
-const inputs= document.querySelectorAll('input[type="text"],input[type="button"]');
-
-
-// let pseudo,number,month,year,cvv;
 
 const form= document.querySelector('form');
 const btn= document.querySelector('#btn');
 
 const pseudo= document.querySelector('#pseudo');
-
-
-const cardNumber= document.querySelector('.card-number');  
-const cardUsername= document.querySelector('.card-username');
-const cardExpDate= document.querySelector('.card-exp_date');
-
-
 
 
 const errorDisplay=(tag,message,valid)=>{
@@ -53,10 +53,11 @@ const numberChecker=(value)=>{
 }}
 
 const monthChecker=(value)=>{
-  if (value.length>0  &&((value.length<2)|| (!value.match(/^\d{2}$/)))) {
+  if (value.length>0  && (!value===(01||02||03||04||05||06||07))) {
     errorDisplay('month',"Can't be blank");
     month=null;
-   
+   }else if(value.length===0){
+    errorDisplay('month',"write something");
   }else{
     errorDisplay('month',"",true);
     month=value;
@@ -111,25 +112,14 @@ inputs.forEach((input)=>{
 btn.addEventListener('click',(e)=>{
  e.preventDefault();
 
-  // cardUsername.innerHTML=pseudo.value;
-  
-  const data={
-    pseudo,
-    number,
-    month,
-    year,
-    cvv
+if(inputText1,inputText2,inputText3,inputText4,inputText5){
 
-  }
-  inputs.forEach(elemn=>{
-   elemn.addEventListener('input',(e)=>{
-  const inputValue=e.target.value;
-  const target=data[data.id];
-  document.getElementById(target).innerHTML=inputValue;
-   })
-  })
-  console.log(data);
- 
+  outputText1.innerHTML=inputText1.value;
+  outputText2.innerHTML=inputText2.value;
+  outputText3.innerHTML=inputText3.value;
+  outputText4.innerHTML=inputText4.value;
+  outputText5.innerHTML=inputText5.value;
+}
 
 })
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
