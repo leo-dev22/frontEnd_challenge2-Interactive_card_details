@@ -1,8 +1,8 @@
-const inputText1=document.querySelector('.input_text1');
-const inputText2=document.querySelector('.input_text2');
-const inputText3=document.querySelector('.input_text3');
-const inputText4=document.querySelector('.input_text4');
-const inputText5=document.querySelector('.input_text5');
+let inputText1=document.querySelector('.input_text1');
+let inputText2=document.querySelector('.input_text2');
+let inputText3=document.querySelector('.input_text3');
+let inputText4=document.querySelector('.input_text4');
+let inputText5=document.querySelector('.input_text5');
 const outputText1=document.querySelector('.output_text1');
 const outputText2=document.querySelector('.output_text2');
 const outputText3=document.querySelector('.output_text3');
@@ -33,7 +33,7 @@ const errorDisplay=(tag,message,valid)=>{
 //fonction that controls each input
 const pseudoChecker=(value)=>{
   
-  if (value.length>0 && (!value.match(/^[A-Z ]*$/))) {
+  if (value.length>0 && (!value.match(/^[A-Z]*$/))) {
     errorDisplay('pseudo',"Your name should be on capital letter only");
     pseudo=null;
   
@@ -53,21 +53,24 @@ const numberChecker=(value)=>{
 }}
 
 const monthChecker=(value)=>{
-  if (value.length>0  && (!value===(01||02||03||04||05||06||07))) {
-    errorDisplay('month',"Can't be blank");
+  if (value.length>0  &&((!value.match(/(^0[1-9]$)|(^1[0-2]$)/)))) {
+    errorDisplay('month',"Wrong format");
     month=null;
    }else if(value.length===0){
-    errorDisplay('month',"write something");
+    errorDisplay('month',"Can't be blank");
+    month=null;
   }else{
     errorDisplay('month',"",true);
     month=value;
 }}
 
 const yearChecker=(value)=>{
-  if (value.length>0  &&((value.length<2)|| (!value.match(/^\d{2}$/)))) {
+  if (value.length>0  &&((!value.match(/(^0[1-9]$)|(^2[0-4]$)/)))) {
+    errorDisplay('year',"Wrong year");
+    year=null;
+  }else if(value.length===0){
     errorDisplay('year',"Can't be blank");
-    year=value;
- 
+   year=null;
   }else{
     errorDisplay('year',"",true);
     year=value;
@@ -108,17 +111,30 @@ inputs.forEach((input)=>{
   
  })
 })
-
+form.addEventListener('submit',(e)=>{
+  e.preventDefault();
+  console.log('test');
+})
 btn.addEventListener('click',(e)=>{
  e.preventDefault();
 
-if(inputText1,inputText2,inputText3,inputText4,inputText5){
+if(inputText1 && inputText2 &&inputText3 && inputText4 &&inputText5){
 
   outputText1.innerHTML=inputText1.value;
   outputText2.innerHTML=inputText2.value;
   outputText3.innerHTML=inputText3.value;
   outputText4.innerHTML=inputText4.value;
   outputText5.innerHTML=inputText5.value;
+
+  inputs.forEach((input)=>{
+    input.value="";
+  })
+
+  inputText1=null;
+  inputText2=null;
+  inputText3=null;
+  inputText4=null;
+  inputText5=null;
 }
 
 })

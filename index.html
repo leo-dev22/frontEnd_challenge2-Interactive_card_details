@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <form action="">
+  <main>
   
     <div class="card1">
       <div class="card">
@@ -25,9 +25,12 @@
           id="card_username">
             LEOPAULD NDENKO
           </div>
-          <div class="card-exp_date output_text3">00</div>
-          <div class="card-exp_date ">/</div>
-          <div class="card-exp_date output_text4">00</div>
+          <div class="exp_date">
+
+            <div class="card-exp_date output_text3">00</div>
+            <div class="card-exp_date ">/</div>
+            <div class="card-exp_date output_text4">00</div>
+          </div>
         </div>
       </div>
     </div>
@@ -36,32 +39,29 @@
     </div>
     
     <section class="left">
-      
     </section>
+
     <section class="right">
      <div class="right-plus">
       <form action="">
-      <div class="pseudo-container">
+       <div class="pseudo-container">
         <label for="pseudo">CARDHOLDER NAME</label>
-        <input type="text" name="pseudo" class="input_text1" id="pseudo " size="26" required placeholder="e.g. Leopauld Ndenko" autocomplete="off">
+        <input type="text" name="pseudo" class="input_text1" id="pseudo " size="26" placeholder="e.g. Leopauld Ndenko" autocomplete="off"required >
         <span></span>
-      </div>
-      <div class="number-container">
+       </div>
+       <div class="number-container">
         <label for="number">CARD NUMBER</label>
         <input type="text"  name="number" class="input_text2" id="number" 
         placeholder="e.g. 1234 5678 9123 0000 " autocomplete="off"
          maxlength="19">
         <span></span>
-      </div>
+       </div>
 
-      <div class="date">
-        
+       <div class="date">
         <div class="left-container">
-          
           <div class="month-container">
           <label for="month">EXP. DATE (MM/YY)</label>
-          <input type="number" id="month" class="month input_text3" placeholder="MM" maxlength="2"
-           >
+          <input type="number" id="month" class="month input_text3" placeholder="MM" maxlength="2">
           <span></span>
         </div>
 
@@ -70,20 +70,26 @@
           <input type="number"   name="year " id="year" class="year input_text4" placeholder="YY" required maxlength="2">
           <span ></span>
         </div>
-      </div>
+        </div>
         
-      <div class="right-container">
+        <div class="right-container">
           <label for="cvv">CVV</label>
           <input type="number" class="cvv input_text5" name="cvv" id="cvv" placeholder="e.g. 123" maxlength="3" required>
           <span></span>
         </div>
-      </div>
+
+       </div>
+
+      </form>
+       
       <input type="button" class="btn btm" id="btn" value="confirm">
-     </div>
-    </form>
-    </section> 
+     
+    
+    </div>
+
   
-</form>
+    </section> 
+  </main>
 <script src="./main.js"></script>
 </body>
 </html>
