@@ -43,6 +43,13 @@ input[type=number]::-webkit-outer-spin-button {
 -webkit-appearance: none;
 margin: 0;
 }
+input[type=number]:hover,input[type=text]:hover{
+  cursor: pointer;
+  border:2px solid var(--Very-dark-violet) ;
+}
+input[type=button]:hover{
+  cursor: pointer;
+}
 
 
 section.left{
@@ -137,14 +144,24 @@ section.right{
   width: 831px;
   background-color: var(--color-white);
 }
-.right-plus{
+.right-plus,.right-minus{
   display: flex;
   flex-direction: column;
   margin-top: 221px;
   padding-left: 295px;
 
 }
- label{
+
+.thumb-img{ 
+  background-image: url(./images/icon-complete.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 70px;
+  width: 70px;
+  margin-bottom: 35px;
+  /* padding-left: 10px; */
+}
+ label,.thank{
   display: flex;
   margin: 10px 10px 10px 0;
   font-size: .7rem;
@@ -152,6 +169,21 @@ section.right{
   font-family: var(--ff);
   letter-spacing: .10em;
   color: var(--Very-dark-violet);
+}
+.thank{
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 335px;
+  margin-left: -53px;
+  margin-bottom: -2px;
+}
+.right-minus .text{
+  width: 335px;
+  margin-top: 17px;
+  margin-bottom: 10px;
+  color: var(--Dark-grayish-violet);
+  margin-left: -74px;
+
 }
 input,.btn{
   width: 335px;
@@ -167,6 +199,17 @@ input::placeholder{
   font-size: 1rem;
   font-family: var(--ff);
   padding-left: 13px;
+}
+/* .right-plus{
+  display: none;
+} */
+.right-minus{
+  margin-top: 267px;
+  padding-left: 433px;
+ 
+  
+  display: none;
+  
 }
 .pseudo-container{
   display: flex;
@@ -214,6 +257,7 @@ margin-right: 5px;
   display: flex;
   flex-direction: column;
   margin-right: 200px;
+  
 }
 .right-container>input{
   width: 170px;
@@ -237,6 +281,8 @@ text-transform:capitalize;
 font-weight: 600;
 letter-spacing: .12em;
 }
-
+.btn2{
+  margin-left: -133px;
+}
 
 

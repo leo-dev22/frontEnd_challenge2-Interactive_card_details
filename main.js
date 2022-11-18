@@ -9,10 +9,13 @@ const outputText3=document.querySelector('.output_text3');
 const outputText4=document.querySelector('.output_text4');
 const outputText5=document.querySelector('.output_text5');
 const inputs= document.querySelectorAll('input[type="text"],input[type="number"]');
+rightPlus=document.querySelector('.right-plus')
+rightMinus=document.querySelector('.right-minus')
 
 
 const form= document.querySelector('form');
 const btn= document.querySelector('#btn');
+const btn2= document.querySelector('#btn2');
 
 const pseudo= document.querySelector('#pseudo');
 
@@ -33,7 +36,7 @@ const errorDisplay=(tag,message,valid)=>{
 //fonction that controls each input
 const pseudoChecker=(value)=>{
   
-  if (value.length>0 && (!value.match(/^[A-Z]*$/))) {
+  if (value.length>0 && (!value.match(/^[a-zA-Z'-]+$/))) {
     errorDisplay('pseudo',"Your name should be on capital letter only");
     pseudo=null;
   
@@ -111,10 +114,8 @@ inputs.forEach((input)=>{
   
  })
 })
-form.addEventListener('submit',(e)=>{
-  e.preventDefault();
-  console.log('test');
-})
+
+
 btn.addEventListener('click',(e)=>{
  e.preventDefault();
 
@@ -135,7 +136,17 @@ if(inputText1 && inputText2 &&inputText3 && inputText4 &&inputText5){
   inputText3=null;
   inputText4=null;
   inputText5=null;
+
+
+  rightPlus.style.display='none';
+  rightMinus.style.display='block';
 }
 
 })
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+btn2.addEventListener('click',()=>{
+  rightPlus.style.display='block';
+  rightMinus.style.display='none';
+  
+
+})
+
