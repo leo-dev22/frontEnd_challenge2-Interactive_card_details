@@ -54,7 +54,7 @@ input[type=button]:hover{
 
 section.left{
   width: 426px;
-  height: 790px;
+  height: 100vh;
   background-image: url(./images/bg-main-desktop.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -90,8 +90,7 @@ section.left{
   margin: 10px 0 0 20px;
 }
 .round-image{
-  display: flex;
-  
+  display: flex; 
 }
 .card{
   padding: 1.8rem 1.8rem 1.2rem 1.8rem;
@@ -140,7 +139,7 @@ section.left{
       color: var(--color-white);
 }
 section.right{
-  height: 790px;
+  height: 100vh;
   width: 831px;
   background-color: var(--color-white);
 }
@@ -200,16 +199,10 @@ input::placeholder{
   font-family: var(--ff);
   padding-left: 13px;
 }
-/* .right-plus{
-  display: none;
-} */
 .right-minus{
   margin-top: 267px;
-  padding-left: 433px;
- 
-  
+  padding-left: 433px; 
   display: none;
-  
 }
 .pseudo-container{
   display: flex;
@@ -286,3 +279,98 @@ letter-spacing: .12em;
 }
 
 
+/* media query */
+@media only screen and (max-width:376px) {
+  body{
+    width: var(--width-mobile);
+   
+   display: flex;
+   justify-content: center; 
+ }
+ main{
+  display:flex;
+ flex-direction:column;
+
+}
+section.left{
+  width: 375px;
+  height: 33vh;
+} 
+section.right{
+  width: 375px;
+  height: 60vh;
+} 
+.card1{
+  top: 91px;
+  left: 25px;
+  width: 250px;
+  height: 150px;
+  z-index: 100;
+}
+.card2{
+  top: 15px;
+  left: 100px;
+  width: 250px;
+  height: 150px;
+}
+.round1 {
+  width: 30px;
+  height: 30px;
+  
+ }
+ .round2{
+   width: 12px;
+   height: 12px;
+   margin: 10px 0 0 10px;
+ }
+ .card{
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+ .card-number{
+  margin-top: 25px;
+}
+.card-number span{
+  font-size: 1em;
+  letter-spacing: .15rem;
+}
+.card-user{
+  margin-top: 15px;
+  font-size: 10px;
+}
+.card2 .cvv{
+  top: 68px;
+  left: 195px;
+  font-size: 11px;
+  letter-spacing: .13rem;
+}
+.right-plus{
+  margin-top: 60px;
+  padding-left: 25px;
+ 
+}
+.right-minus{
+  margin-top: 75px;
+  padding-left: 160px;
+  width: 369px;
+}
+label{
+  margin: 8px 10px 8px 0;
+  font-size: .65rem;
+}
+input,.btn{
+  width: 320px;
+}
+.date{
+  width: 320px;
+}
+.date .left-container{
+  display: flex;
+  width: 50%;
+}
+.date .right-container{
+  margin-right: 0;
+}
+.right-container>input{
+  width: 150px;
+}
+}
