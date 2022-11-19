@@ -281,9 +281,7 @@ letter-spacing: .12em;
 
 /* media query */
 @media  screen and (max-width:600px) {
-  body{
-    width: var(--width-mobile);
-   
+  body{   
    display: flex;
    justify-content: center; 
  }
